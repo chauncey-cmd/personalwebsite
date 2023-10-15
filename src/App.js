@@ -1,4 +1,5 @@
 import './App.css';
+import React, { useState } from 'react';
 
 function Header() {
   return (
@@ -37,14 +38,32 @@ function Contact() {
 }
 
 function App() {
+
+  const [isFlipped, setFlipped] = useState(false);
+
+  const handleCardClick = () => {
+    setFlipped(!isFlipped);
+  };
+
   return (
-    <div>
+    <><div>
       <Header />
       <main>
         <About />
         <Contact />
       </main>
     </div>
+
+    <div className={`card ${isFlipped ? 'flipped' : ''}`} onClick={handleCardClick}>
+        <div className="card-inner">
+          <div className="card-front">
+            <h2>Vinnie</h2>
+          </div>
+          <div className="card-back">
+            <h2>Back</h2>
+          </div>
+        </div>
+      </div></>
   );
 }
 
