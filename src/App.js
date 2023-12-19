@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
+import ThreeScene from './ThreeScene';
 
 function Header() {
   return (
@@ -51,6 +52,7 @@ function App() {
       <main>
         <About />
         <Contact />
+        <ThreeScene />
       </main>
     </div>
 
