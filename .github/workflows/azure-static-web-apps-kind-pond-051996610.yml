@@ -19,8 +19,6 @@ jobs:
         with:
           submodules: true
           lfs: false
-      - name: Debug npm Logs
-        run: cat /github/home/.npm/_logs/2023-12-19T17_54_50_767Z-debug-0.log
       - name: Build Application
         run: npm run build
       - name: Build And Deploy
