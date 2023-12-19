@@ -15,7 +15,7 @@ function About() {
     <section id="about">
       <h2>About Me</h2>
       <p>
-        Hello! I am Vinnie, and I am a Program Manager. This is my personal website where I share information about myself, my interests, and my experiences.
+        Hello! I am Vinnies, and I am a Program Manager. This is my personal website where I share information about myself, my interests, and my experiences.
       </p>
       <p>
         I am from Wisconsin and I work at Microsoft.
