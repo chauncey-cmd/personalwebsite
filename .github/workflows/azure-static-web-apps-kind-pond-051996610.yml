@@ -19,11 +19,6 @@ jobs:
         with:
           submodules: true
           lfs: false
-      - name: Authenticate with npm
-        run: npm login
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
