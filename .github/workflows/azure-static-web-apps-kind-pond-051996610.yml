@@ -19,11 +19,6 @@ jobs:
         with:
           submodules: true
           lfs: false
-
-  # Add this step to create .npmrc file with NPM_TOKEN
-      - name: Create .npmrc
-        run: echo "//msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
-
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
