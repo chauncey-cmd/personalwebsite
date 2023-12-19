@@ -44,6 +44,7 @@ const ThreeScene = () => {
     window.addEventListener('resize', handleResize);
     animate();
 
+    //adding to rest
     return () => {
       window.removeEventListener('resize', handleResize);
     };
