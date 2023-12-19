@@ -44,7 +44,7 @@ const ThreeScene = () => {
     window.addEventListener('resize', handleResize);
     animate();
 
-    //adding to rest
+    //adding to restafdagfds
     return () => {
       window.removeEventListener('resize', handleResize);
     };
