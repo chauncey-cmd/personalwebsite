@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
-import ThreeScene from './ThreeScene';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Main from './Main';
 
 function Header() {
   return (
@@ -18,7 +19,7 @@ function About() {
         Hello! I am Vinnie, and I am a Program Manager. This is my personal website where I share information about myself, my interests, and my experiences.
       </p>
       <p>
-        I am from Wisconsin and I work at Microsoft.asd
+        I am from Wisconsin and I work at Microsoft.
       </p>
     </section>
   );
@@ -39,7 +40,6 @@ function Contact() {
 }
 
 function App() {
-
   const [isFlipped, setFlipped] = useState(false);
 
   const handleCardClick = () => {
@@ -47,25 +47,45 @@ function App() {
   };
 
   return (
-    <><div>
-      <Header />
-      <main>
-        <About />
-        <Contact />
-        <ThreeScene />
-      </main>
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/main" element={<Main />} />
+          </Routes>
+        </main>
 
-    <div className={`card ${isFlipped ? 'flipped' : ''}`} onClick={handleCardClick}>
-        <div className="card-inner">
-          <div className="card-front">
-            <h2>Vinnie</h2>
-          </div>
-          <div className="card-back">
-            <h2>Back</h2>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">About</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+            <li>
+              <Link to="/main">Main</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <hr />
+
+        <div className={`card ${isFlipped ? 'flipped' : ''}`} onClick={handleCardClick}>
+          <div className="card-inner">
+            <div className="card-front">
+              <h2>Vinnie</h2>
+            </div>
+            <div className="card-back">
+              <h2>Back</h2>
+            </div>
           </div>
         </div>
-      </div></>
+      </div>
+    </Router>
   );
 }
 
