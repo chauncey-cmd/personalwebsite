@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Main from './Main';
+import Contact from './Contact';
 
 function Header() {
   return (
@@ -25,19 +26,6 @@ function About() {
   );
 }
 
-function Contact() {
-  return (
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <p>
-        If you'd like to get in touch with me, you can reach me at vinnie@gmail.com. Feel free to drop me a message, and I'll get back to you as soon as possible.
-      </p>
-      <p>
-        You can also find me on social media: vinnie.angel.
-      </p>
-    </section>
-  );
-}
 
 function App() {
   const [isFlipped, setFlipped] = useState(false);
