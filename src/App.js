@@ -1,3 +1,5 @@
+// App.js
+
 import './App.css';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
@@ -26,7 +28,6 @@ function About() {
   );
 }
 
-
 function App() {
   const [isFlipped, setFlipped] = useState(false);
 
@@ -38,17 +39,10 @@ function App() {
     <Router>
       <div>
         <Header />
-        <main>
-          <Routes>
-          <Route path="/" element={<Main />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
 
         <nav>
           <ul>
-             <li>
+            <li>
               <Link to="/">Main</Link>
             </li>
             <li>
@@ -57,9 +51,16 @@ function App() {
             <li>
               <Link to="/contact">Contact</Link>
             </li>
-            
           </ul>
         </nav>
+
+        <main>
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
 
         <hr />
 
