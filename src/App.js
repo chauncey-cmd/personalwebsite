@@ -7,7 +7,7 @@ import Contact from './Contact';
 function Header() {
   return (
     <header>
-      <h1>About Me</h1>
+      <h1>Vinnie Angellotti</h1>
     </header>
   );
 }
@@ -40,23 +40,24 @@ function App() {
         <Header />
         <main>
           <Routes>
-            <Route path="/" element={<About />} />
+          <Route path="/" element={<Main />} />
+            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/main" element={<Main />} />
           </Routes>
         </main>
 
         <nav>
           <ul>
+             <li>
+              <Link to="/">Main</Link>
+            </li>
             <li>
-              <Link to="/">About</Link>
+              <Link to="/about">About</Link>
             </li>
             <li>
               <Link to="/contact">Contact</Link>
             </li>
-            <li>
-              <Link to="/main">Main</Link>
-            </li>
+            
           </ul>
         </nav>
 
