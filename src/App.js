@@ -5,11 +5,13 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Main from './Main';
 import Contact from './Contact';
+import SocialLinks from './SocialLinks';
 
 function Header() {
   return (
     <header>
       <h1>Vinnie Angellotti</h1>
+      <SocialLinks />
     </header>
   );
 }

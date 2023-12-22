@@ -113,6 +113,7 @@ a:active {
   backface-visibility: hidden;
 }
 
+
 .card-front {
   background-color: #3498db;
 }
@@ -120,4 +121,14 @@ a:active {
 .card-back {
   background-color: #e74c3c;
   transform: rotateY(180deg);
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #fff;
 }
