@@ -6,7 +6,7 @@ const SocialLinks = () => {
     <div className="social-links">
       <a href="https://www.instagram.com/vinnie_angellotti" target="_blank" rel="noopener noreferrer">
         <img
-          src="https://commons.wikimedia.org/wiki/File:Instagram_icon.png"
+          src="..\Media\instagram.png"
           alt="Instagram"
           width="30"
           height="30"
