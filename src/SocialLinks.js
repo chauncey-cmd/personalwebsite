@@ -6,7 +6,7 @@ const SocialLinks = () => {
     <div className="social-links">
       <a href="https://www.instagram.com/vinnie_angellotti" target="_blank" rel="noopener noreferrer">
         <img
-          src="..\Media\instagram.png"
+          src={require('./Media/instagram.png')} // Update the path
           alt="Instagram"
           width="30"
           height="30"
