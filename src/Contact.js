@@ -1,5 +1,6 @@
 // Contact.js
 import React, { useState } from 'react';
+import './Contact.css'; // Import a separate CSS file for Contact component styling
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -31,9 +32,9 @@ function Contact() {
     <section id="contact">
       <h2>Contact Me</h2>
       {submitted ? (
-        <p>Thank you for the submission!</p>
+        <p className="thank-you-message">Thank you for the submission!</p>
       ) : (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="contact-form">
           <label>
             Name:
             <input type="text" name="name" value={formData.name} onChange={handleChange} />

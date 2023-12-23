@@ -1,0 +1,38 @@
+/* Contact.css */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px; /* Adjust the maximum width as needed */
+    margin: 0 auto;
+    padding: 20px; /* Add padding for spacing */
+  }
+  
+  label {
+    margin-bottom: 15px;
+    font-size: 18px; /* Increase label font size */
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px; /* Increase input and textarea padding */
+    margin-bottom: 20px; /* Increase bottom margin */
+    font-size: 16px; /* Increase input and textarea font size */
+  }
+  
+  button {
+    background-color: #42a5f5;
+    color: #fff;
+    padding: 15px; /* Increase button padding */
+    border: none;
+    cursor: pointer;
+    font-size: 18px; /* Increase button font size */
+  }
+  
+  .thank-you-message {
+    color: #4caf50;
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 18px; /* Increase thank you message font size */
+  }
+  

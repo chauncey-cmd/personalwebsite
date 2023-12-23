@@ -1,7 +1,7 @@
 // App.js
 
 import './App.css';
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Main from './Main';
 import Contact from './Contact';
@@ -20,26 +20,39 @@ function About() {
   return (
     <section id="about">
       <h2>About Me</h2>
-      <p>
-        Hello! I am Vinnie, and I am a Program Manager. This is my personal website where I share information about myself, my interests, and my experiences.
-      </p>
-      <p>
-        I am from Wisconsin and I work at Microsoft.
-      </p>
+      <div class="cool-intro">
+  <p>
+    Hey there! I'm Vinnie Angellotti, a tech enthusiast and accomplished Program Manager who's passionate about shaping the future through innovation. Welcome to my digital hub – the epicenter of my professional journey and personal passions.
+  </p>
+  <p>
+    In my role as a Program Manager, I'm on a relentless pursuit of merging technology with business acumen, steering projects towards success and contributing to the growth of organizations. With a proven track record of meticulous planning and execution, I thrive on driving impactful initiatives that truly make a difference.
+  </p>
+  <p>
+    Originating from the scenic landscapes of Wisconsin, my career path led me to the vibrant tech scene of Washington. Currently based in the heart of innovation, I'm continually exploring and contributing to the exciting world of technology.
+  </p>
+  <p>
+    Beyond the boardroom, I'm a dedicated sports enthusiast. Whether it's a friendly match or a competitive game, I find joy and balance on the playing field, believing in the power of sports to inspire teamwork, discipline, and personal growth.
+  </p>
+  <p>
+    Navigating the ever-evolving tech landscape, I've had the privilege of contributing to cutting-edge projects at Microsoft, a global leader in the industry. This journey has been both rewarding and stimulating, fostering collaboration with brilliant minds and shaping the future of technology.
+  </p>
+  <p>
+    This website is more than a portfolio – it's a canvas that reflects my journey, offering glimpses into my professional achievements, personal interests, and unique experiences. Dive in, connect, and feel free to reach out with any questions or if there's something specific you'd like to know.
+  </p>
+  <p>
+    Thanks for dropping by, and let's embark on this exciting journey together!
+  </p>
+</div>
+
     </section>
   );
 }
 
 function App() {
-  const [isFlipped, setFlipped] = useState(false);
-
-  const handleCardClick = () => {
-    setFlipped(!isFlipped);
-  };
 
   return (
     <Router>
-      <div>
+      <div  className="center-container">
         <Header />
 
         <nav>
@@ -66,16 +79,6 @@ function App() {
 
         <hr />
 
-        <div className={`card ${isFlipped ? 'flipped' : ''}`} onClick={handleCardClick}>
-          <div className="card-inner">
-            <div className="card-front">
-              <h2>Vinnie</h2>
-            </div>
-            <div className="card-back">
-              <h2>Back</h2>
-            </div>
-          </div>
-        </div>
       </div>
     </Router>
   );
